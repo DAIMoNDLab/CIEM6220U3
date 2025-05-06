@@ -57,7 +57,7 @@ if warmup > 0:
 while my_sim.curr_step < sim_dur + warmup:
     my_sim.step_through(n_seconds=n, pbar_max_steps=sim_dur+warmup)
     if my_sim.curr_step == 2 and doRecord:
-        recorder.record_network(recording_name="r1",bounds=((0, 0), (200, 200)),speed=20)
+        recorder.record_network(recording_id="r1",bounds=((0, 0), (200, 200)),speed=20)
     if my_sim.curr_step >= sim_dur and doRecord:
         recorder.save_recording("r1","platooning_vid.mp4")
 
